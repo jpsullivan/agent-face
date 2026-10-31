@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@source "../src";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Stand-ins for the app's design tokens referenced by the converted classes. */
+@theme {
+  --color-clay: #d97757;
+  --color-clay-emphasized: #b5573a;
+  --color-cactus: #bacd93;
+  --color-heather: #cbcadb;
+  --color-mineral: #629987;
+  --color-plum: #8784ab;
+  --color-yellow-300: #f5c97f;
+  --color-yellow-400: #f0ac54;
+  --color-blue-300: #a5c9e9;
+  --color-blue-400: #6a9bcc;
+  --color-magenta-300: #e8a3bd;
+  --color-magenta-400: #c46686;
+  --color-green-250: #b9dcb0;
+  --color-green-400: #6fae6a;
+  --color-aqua-350: #8fcfc3;
+  --color-aqua-400: #579380;
+  --color-tint-yellow: #bb7a14;
+  --color-tint-blue: #5b8bbb;
+  --color-tint-magenta: #c46686;
+  --color-tint-green: #4f8a4a;
+  --color-tint-aqua: #3f8a7a;
+  --color-fill-brand: #d97757;
+  --color-alpha-1: rgb(0 0 0 / 0.06);
+  --color-secondary: #73726c;
+}
+
+:root {
+  color-scheme: light;
+  --page: #faf9f5;
+  --panel: #ffffff;
+  --line: #e8e6dc;
+  --text: #1f1e1d;
+  --muted: #73726c;
+}
+:root.dark {
+  color-scheme: dark;
+  --page: #1f1e1d;
+  --panel: #2a2927;
+  --line: #3d3c39;
+  --text: #f0eee6;
+  --muted: #a3a29c;
+  --color-alpha-1: rgb(255 255 255 / 0.08);
+  --color-secondary: #a3a29c;
+}
+
+body {
+  background: var(--page);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
