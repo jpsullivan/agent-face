@@ -72,7 +72,11 @@ npm install
 npm run typecheck
 npm test
 npm run dev   # playground at http://localhost:5199
+npm run build # static playground in dist/
 ```
+
+Pushes to `main` deploy the playground to GitHub Pages
+(`.github/workflows/pages.yml`) at https://jpsullivan.github.io/agent-face/.
 
 ## Playground
 
