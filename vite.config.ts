@@ -32,8 +32,11 @@ function playgroundShims(): Plugin {
 
 export default defineConfig({
   root: "playground",
+  // Relative asset URLs, so the build works under the GitHub Pages /agent-face/ path.
+  base: "./",
   plugins: [...(process.env.VITEST ? [] : [playgroundShims()]), react(), tailwindcss()],
   resolve: { alias: { "@": src } },
   server: { port: 5199, strictPort: true },
+  build: { outDir: "../dist", emptyOutDir: true },
   test: { root: ".", include: ["src/**/*.test.ts"] },
 });
